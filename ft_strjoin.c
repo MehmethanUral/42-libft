@@ -6,7 +6,7 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/10 08:48:20 by mural             #+#    #+#             */
-/*   Updated: 2026/08/10 09:51:30 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/11 16:32:53 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	size_t len1;
-	size_t len2;
-	size_t i;
-	char *joined;
+	size_t	len1;
+	size_t	len2;
+	size_t	i;
+	char	*joined;
 
 	if (!s1 || !s2)
 		return (NULL);

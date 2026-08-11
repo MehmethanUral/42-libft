@@ -6,7 +6,7 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 12:27:27 by mural             #+#    #+#             */
-/*   Updated: 2026/08/10 11:56:49 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/11 16:28:11 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s1)
 {
 	char	*dest;
 	size_t	i;
-	
+
 	dest = malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (!dest)
 		return (NULL);
@@ -28,25 +28,4 @@ char	*ft_strdup(const char *s1)
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-	const char *src = "Hello, World!";
-	char *dest = ft_strdup(src);
-
-	if (dest != NULL)
-	{
-		printf("Src: %s\n", src);
-		printf("Dest: %s\n", dest);
-		free(dest);
-	}
-	else
-	{
-		printf("Memory allocation failed.\n");
-	}
-
-	return 0;
 }

@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/10 10:21:57 by mural             #+#    #+#             */
-/*   Updated: 2026/08/11 16:32:29 by mural            ###   ########.fr       */
+/*   Created: 2026/08/11 10:18:53 by mural             #+#    #+#             */
+/*   Updated: 2026/08/11 16:19:57 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s1, const char *set)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	start;
-	size_t	end;
-	char	*trimmed;
+	t_list	*new_node;
 
-	if (!s1 || !set)
+	new_node = ft_calloc(1, sizeof(t_list));
+	if (!new_node)
 		return (NULL);
-	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	end = ft_strlen(s1);
-	while (end > start && ft_strchr(set, s1[end - 1]))
-		end--;
-	trimmed = malloc(sizeof(char) * (end - start + 1));
-	if (!trimmed)
-		return (NULL);
-	ft_strlcpy(trimmed, s1 + start, end - start + 1);
-	return (trimmed);
+	new_node->content = content;
+	return (new_node);
 }

@@ -6,16 +6,16 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/10 11:57:42 by mural             #+#    #+#             */
-/*   Updated: 2026/08/10 13:34:05 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/11 16:22:46 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
-	
+
 	if (!s || !f)
 		return ;
 	i = 0;

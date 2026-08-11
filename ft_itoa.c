@@ -6,13 +6,50 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/10 10:37:40 by mural             #+#    #+#             */
-/*   Updated: 2026/08/10 11:04:21 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/11 16:23:20 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static	int	count_digit(long n)
+{
+	int	count;
+
+	count = 1;
+	while (n / 10)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
+}
+
 char	*ft_itoa(int n)
 {
-	
+	char	*result;
+	long	value;
+	int		negative;
+	int		len;
+
+	value = n;
+	negative = 0;
+	if (value < 0)
+	{
+		negative = 1;
+		value = -value;
+	}
+	len = count_digit(value) + negative;
+	result = malloc(len + 1);
+	if (!result)
+		return (NULL);
+	result[len] = '\0';
+	while (len-- > negative)
+	{
+		result[len] = '0' + (value % 10);
+		value /= 10;
+	}
+	if (negative)
+		result[0] = '-';
+	return (result);
 }

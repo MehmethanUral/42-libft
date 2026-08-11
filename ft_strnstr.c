@@ -6,7 +6,7 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 11:00:03 by mural             #+#    #+#             */
-/*   Updated: 2026/08/06 11:24:01 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/11 16:27:57 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	
+
 	i = 0;
 	if (little[0] == '\0')
 		return ((char *)big);
-	
 	while (big[i] != '\0' && i < len)
 	{
 		j = 0;
@@ -33,21 +32,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		i++;
 	}
 	return (NULL);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-	char big[] = "Hello, World!";
-	char little[] = "o";
-	size_t len = 4;
-
-	char *result = ft_strnstr(big, little, len);
-	if (result != NULL)
-		printf("Result: %s\n", result);
-	else
-		printf("Result: NULL\n");
-
-	return 0;
 }

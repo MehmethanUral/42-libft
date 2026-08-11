@@ -6,7 +6,7 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 12:20:14 by mural             #+#    #+#             */
-/*   Updated: 2026/08/06 14:10:45 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/11 16:28:48 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t i;
-	unsigned char *ptr;
-	
+	size_t			i;
+	unsigned char	*ptr;
+
 	c = (unsigned char)c;
 	ptr = (unsigned char *)b;
-
 	i = 0;
-	while(i < len)
+	while (i < len)
 	{
 		ptr[i] = c;
 		i++;

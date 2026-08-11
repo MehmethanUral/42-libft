@@ -6,11 +6,11 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/10 13:37:07 by mural             #+#    #+#             */
-/*   Updated: 2026/08/10 13:39:06 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/11 16:22:05 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
