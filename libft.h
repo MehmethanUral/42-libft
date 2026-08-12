@@ -15,7 +15,6 @@
 
 #include <stdlib.h>   // malloc, free, calloc
 #include <unistd.h>   // write
-#include <string.h>   // sadece bsd/string.h test edeceksen (opsiyonel)
 
 typedef struct s_list
 {
