@@ -6,7 +6,7 @@
 #    By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/11 11:44:50 by mural             #+#    #+#              #
-#    Updated: 2026/08/12 09:31:46 by mural            ###   ########.fr        #
+#    Updated: 2026/08/12 10:08:24 by mural            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c libft.h
-	$(CC) $(CFLAGS) -c $< -0 $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
