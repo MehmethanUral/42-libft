@@ -6,7 +6,7 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/10 10:37:40 by mural             #+#    #+#             */
-/*   Updated: 2026/08/11 16:23:20 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/12 09:16:11 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,18 @@ static	int	count_digit(long n)
 		count++;
 	}
 	return (count);
+}
+
+static void	fill_digit(char *result, long value, int len, int negative)
+{
+	result[len] = '\0';
+	while (len-- > negative)
+	{
+		result[len] = '0' + (value % 10);
+		value /= 10;
+	}
+	if (negative)
+		result[0] = '-';
 }
 
 char	*ft_itoa(int n)
@@ -43,13 +55,6 @@ char	*ft_itoa(int n)
 	result = malloc(len + 1);
 	if (!result)
 		return (NULL);
-	result[len] = '\0';
-	while (len-- > negative)
-	{
-		result[len] = '0' + (value % 10);
-		value /= 10;
-	}
-	if (negative)
-		result[0] = '-';
+	fill_digit(result, value, len, negative);
 	return (result);
 }
