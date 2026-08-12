@@ -6,7 +6,7 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 10:08:35 by mural             #+#    #+#             */
-/*   Updated: 2026/08/11 16:37:38 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/12 17:20:47 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	*str;
+	size_t			i;
 	unsigned char	ch;
 
-	str = (unsigned char *)s;
 	ch = (unsigned char)c;
-	while (*str)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		if (*str == ch)
-			return ((char *)str);
-		str++;
+		if (s[i] == ch)
+			return ((char *)&s[i]);
+		i++;
 	}
+	if (s[i] == ch)
+		return ((char *)&s[i]);
 	return (NULL);
 }

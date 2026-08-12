@@ -1,4 +1,4 @@
-This project has been created as part of the 42 curriculum by mural.*
+This project has been created as part of the 42 curriculum by mural.
 
 # Description
 libft is a custom C standard library reimplementation built for the 42 curriculum. The goal is to deepen understanding of low-level C programming by recreating common libc utilities, plus additional helpers and linked list API. The output is a static library, `libft.a`, that can be linked into other C projects.

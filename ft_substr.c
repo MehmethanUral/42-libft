@@ -6,7 +6,7 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 14:28:32 by mural             #+#    #+#             */
-/*   Updated: 2026/08/12 10:27:59 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/12 17:20:01 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-    size_t	i;
-    size_t	s_len;
-    char	*substr;
+	size_t	i;
+	size_t	s_len;
+	char	*substr;
 
 	if (!s)
 		return (NULL);
@@ -27,7 +27,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		len = s_len - start;
 	substr = malloc(sizeof(char) * (len + 1));
 	if (!substr)
-        return (NULL);
+		return (NULL);
 	i = 0;
 	while (i < len && s[start + i])
 	{

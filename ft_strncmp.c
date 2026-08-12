@@ -6,7 +6,7 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 10:54:38 by mural             #+#    #+#             */
-/*   Updated: 2026/08/12 10:28:08 by mural            ###   ########.fr       */
+/*   Updated: 2026/08/12 17:20:08 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*str1;
-    unsigned char	*str2;
+	unsigned char	*str2;
 	size_t			i;
 
 	str1 = (unsigned char *)s1;
