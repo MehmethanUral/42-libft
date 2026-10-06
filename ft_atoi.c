@@ -6,11 +6,9 @@
 /*   By: mural <mural@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 11:26:01 by mural             #+#    #+#             */
-/*   Updated: 2026/08/11 16:27:32 by mural            ###   ########.fr       */
+/*   Updated: 2026/10/01 09:51:01 by mural            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
